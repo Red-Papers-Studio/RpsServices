@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ItemGroup>
+    <Content Include="AuthService\auth-deployment.yml" />
+    <Content Include="AuthService\auth-cluster-ip.yml" />
+    <Content Include="AuthService\auth-node-port.yml" />
+    <Content Include="ingress-service.yml" />
+    <Content Include="MsSqlServer\mssql-cluster-ip.yml" />
+    <Content Include="MsSqlServer\mssql-deployment.yml" />
+    <Content Include="MsSqlServer\mssql-load-balancer.yml" />
+    <Content Include="MsSqlServer\mssql-pvc.yml" />
+    <Content Include="rps-site-namespace.yml" />
+    <Content Include="rps-site-secrets.yml" />
+  </ItemGroup>
+</Project>

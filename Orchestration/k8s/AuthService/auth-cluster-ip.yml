@@ -1,0 +1,14 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: auth-cluster-ip
+  namespace: rps-site
+spec:
+  type: ClusterIP
+  selector:
+    app: auth-service
+  ports:
+    - name: auth-service
+      protocol: TCP
+      port: 80
+      targetPort: 80

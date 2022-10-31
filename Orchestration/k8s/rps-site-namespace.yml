@@ -1,0 +1,7 @@
+﻿apiVersion: v1
+kind: Namespace
+metadata:
+  name: rps-site
+  labels:
+    name: rps-site
+  

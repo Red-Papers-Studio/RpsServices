@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  authservice:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443
+    ports:
+      - "9090:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  
+  mssql:
+    ports:
+      - "1533:1433"
+    environment:
+      MSSQL_PID: Express
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: one4every1!

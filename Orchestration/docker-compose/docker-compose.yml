@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+
+  authservice:
+    image: ${DOCKER_REGISTRY-}authservice
+    build:
+      context: ../../..
+      dockerfile: Services/AuthService/Auth.API/Dockerfile
+      
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest

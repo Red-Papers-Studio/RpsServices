@@ -1,0 +1,43 @@
+---
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - develop
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  
+  test-auth-unit:
+    name: Tests Auth.UnitTests
+    uses: Red-Papers-Studio/.github/.github/workflows/dotnet_test.yml@main
+    with:
+      dotnet_version: 6.0.x
+      report_name: Test results for Auth.UnitTests
+      test_path: Services/AuthService/Auth.UnitTests
+      
+  test-auth-integration:
+    name: Tests Auth.IntegrationTests
+    uses: Red-Papers-Studio/.github/.github/workflows/dotnet_test.yml@main
+    with:
+      dotnet_version: 6.0.x
+      report_name: Test results for Auth.IntegrationTests
+      test_path: Services/AuthService/Auth.IntegrationTests
+  
+  test-storage-unit:
+    name: Tests Storage.UnitTests
+    uses: Red-Papers-Studio/.github/.github/workflows/dotnet_test.yml@main
+    with:
+      dotnet_version: 6.0.x
+      report_name: Test results for Storage.UnitTests
+      test_path: Services/StorageService/Storage.UnitTests
+      
+  test-storage-integration:
+    name: Tests Storage.IntegrationTests
+    uses: Red-Papers-Studio/.github/.github/workflows/dotnet_test.yml@main
+    with:
+      dotnet_version: 6.0.x
+      report_name: Test results for Storage.IntegrationTests
+      test_path: Services/StorageService/Storage.IntegrationTests
