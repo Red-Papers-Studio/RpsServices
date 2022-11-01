@@ -3,7 +3,8 @@ name: Test
 
 on:
   pull_request:
-    branches:
+    branches:      
+      - main              
       - develop
   workflow_call:
   workflow_dispatch:
@@ -15,7 +16,7 @@ jobs:
     uses: Red-Papers-Studio/.github/.github/workflows/dotnet_test.yml@main
     with:
       dotnet_version: 6.0.x
-      report_name: Test results for Auth.UnitTests
+      project_name: Auth.UnitTests
       test_path: Services/AuthService/Auth.UnitTests
       
   test-auth-integration:
@@ -23,7 +24,7 @@ jobs:
     uses: Red-Papers-Studio/.github/.github/workflows/dotnet_test.yml@main
     with:
       dotnet_version: 6.0.x
-      report_name: Test results for Auth.IntegrationTests
+      project_name: Auth.IntegrationTests
       test_path: Services/AuthService/Auth.IntegrationTests
   
   test-storage-unit:
@@ -31,7 +32,7 @@ jobs:
     uses: Red-Papers-Studio/.github/.github/workflows/dotnet_test.yml@main
     with:
       dotnet_version: 6.0.x
-      report_name: Test results for Storage.UnitTests
+      project_name: Storage.UnitTests
       test_path: Services/StorageService/Storage.UnitTests
       
   test-storage-integration:
@@ -39,5 +40,5 @@ jobs:
     uses: Red-Papers-Studio/.github/.github/workflows/dotnet_test.yml@main
     with:
       dotnet_version: 6.0.x
-      report_name: Test results for Storage.IntegrationTests
+      project_name: Storage.IntegrationTests
       test_path: Services/StorageService/Storage.IntegrationTests

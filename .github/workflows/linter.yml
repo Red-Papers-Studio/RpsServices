@@ -3,11 +3,11 @@ name: Lint Code Base
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
       - develop
   pull_request:
-    branches: 
+    branches:
       - main
       - develop
 
