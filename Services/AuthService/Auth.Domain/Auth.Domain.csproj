@@ -4,15 +4,17 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Events" />
-      <Folder Include="Exceptions" />
+        <Folder Include="Events"/>
+        <Folder Include="Exceptions"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="ModifiableEntities" Version="1.0.0" />
+        <PackageReference Include="DomainDrivenDesign" Version="1.0.0"/>
+        <PackageReference Include="ModifiableEntities" Version="1.0.0"/>
     </ItemGroup>
 
 </Project>
